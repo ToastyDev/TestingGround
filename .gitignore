@@ -32,5 +32,5 @@
 *.app
 
 # UE4 Specific Ignores
-TestingGround/Intermediate/*
-TestingGround/Saved/*
+Intermediate/*
+Saved/*
