@@ -9,3 +9,5 @@
 *.ipch
 
 *.vc.db
+*.vc.db-wal
+*.vc.db-shm
