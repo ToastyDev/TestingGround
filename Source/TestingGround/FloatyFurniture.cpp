@@ -16,11 +16,11 @@ void AFloatyFurniture::BeginPlay()
 {
 	Super::BeginPlay();
 	FString ActorName = GetName();
-	FString ActorLabel = GetActorLabel();
+
 	FTransform ActorTransform = GetTransform();
 	UE_LOG(LogTemp, Warning, TEXT("Name: %s"), *ActorName);
-	UE_LOG(LogTemp, Warning, TEXT("Name: %s"), *ActorLabel);
-	UE_LOG(LogTemp, Warning, TEXT("Location: %s"), ActorTransform.ToString()); 
+
+	
 	
 }
 
@@ -36,4 +36,3 @@ void AFloatyFurniture::Tick(float DeltaTime)
 	SetActorLocation(NewLocation);
 
 }
-
