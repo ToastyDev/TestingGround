@@ -8,7 +8,7 @@ ADummyDoor::ADummyDoor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	mesh = CreateDefaultSubobject<UStaticMeshComponent>("DoorMesh");
 }
 
 // Called when the game starts or when spawned
@@ -22,9 +22,6 @@ void ADummyDoor::BeginPlay()
 void ADummyDoor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	
-
 }
 
 void ADummyDoor::OpenDoor()

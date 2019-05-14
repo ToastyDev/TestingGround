@@ -23,6 +23,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere, Category = "Components")
+		UStaticMeshComponent* mesh;
+
+
 private:
 	//Open door
 	void OpenDoor();

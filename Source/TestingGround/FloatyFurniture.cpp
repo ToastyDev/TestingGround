@@ -8,7 +8,7 @@ AFloatyFurniture::AFloatyFurniture()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	mesh = CreateDefaultSubobject<UStaticMeshComponent>("AMesh");
 }
 
 // Called when the game starts or when spawned
@@ -20,8 +20,6 @@ void AFloatyFurniture::BeginPlay()
 	FTransform ActorTransform = GetTransform();
 	UE_LOG(LogTemp, Warning, TEXT("Name: %s"), *ActorName);
 
-	
-	
 }
 
 // Called every frame
@@ -29,10 +27,10 @@ void AFloatyFurniture::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	FVector NewLocation = GetActorLocation();
-	if (NewLocation.Z <= 200)
+	while (NewLocation.Z <= 200)
+	{
 		NewLocation.Z += 20 * DeltaTime;
-	else if (NewLocation.Z >= 500)
-		NewLocation.Z -= 20 * DeltaTime;
-	SetActorLocation(NewLocation);
+		SetActorLocation(NewLocation);
+	}
 
 }
