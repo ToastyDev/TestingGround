@@ -13,3 +13,6 @@
 *.vc.db-shm
 
 *Content/AdvancedVillagePack/*
+*Content/Platformer/*
+*Content/RollsAndDodges/*
+*SourceFiles/*
