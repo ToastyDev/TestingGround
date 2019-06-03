@@ -23,6 +23,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
-	
+	USceneComponent* RootComponent;
+
+	UPROPERTY(EditAnywhere)
+	FVector Velocity = FVector(100.f);
+
+	float BulletExpiry = 0;
 };

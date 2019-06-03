@@ -23,5 +23,11 @@ void ABullet::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	FHitResult HitResult;
+
+	FVector StartTrace = this->GetActorLocation();
+	FVector EndTrace = (Velocity * DeltaTime) + StartTrace;
+
+
 }
 
